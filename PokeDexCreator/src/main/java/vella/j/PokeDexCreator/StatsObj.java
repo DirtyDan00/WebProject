@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class StatsObj {
 
 	@Id
-	private List<StatsObj> TotalBaseStats;
+	private int pokemonId;
 	@Column(name = "Hp", nullable = false)
 	private int Hp;
 	@Column(name = "Attack", nullable = false)

@@ -12,10 +12,10 @@ public class FormsObj {
 
 	@Id
 	private int formId;
-	@OneToMany//may need to change for mew2 and charizard
+	//may need to change for mew2 and charizard
 	@Column(nullable = true)
 	private String mega;
-	@OneToMany
+	
 	@Column(nullable = true)
 	private String alolan;
 	

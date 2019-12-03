@@ -10,57 +10,70 @@ import javax.persistence.Table;
 public class MovesObj {
 
 	@Id
-	private int moveId;
-	@Column(name = "physical", nullable = false)//not sure if this is what we want to annoate
-	private String physical;
-	@Column(name = "special", nullable = false)
-	private String special;
-	@Column(name = "status", nullable = false)
-	private String status;
+	private int Id;
+	@Column(name = "identifier", nullable = false)
+	private String identifier;
+	@Column(name = "power", nullable = false)
+	private int power;
+	@Column(name = "accuracy", nullable = false)
+	private int accuracy;
+	@Column(name = "pp", nullable = false)
+	private int pp;
 
-	public int getMoveId() {
-		return moveId;
+
+	public int getPower() {
+		return power;
 	}
 
-	public void setMoveId(int moveId) {
-		this.moveId = moveId;
+	public void setPower(int power) {
+		this.power = power;
 	}
 
-	public String getPhysical() {
-		return physical;
+	public int getAccuracy() {
+		return accuracy;
 	}
 
-	public void setPhysical(String physical) {
-		this.physical = physical;
+	public void setAccuracy(int accuracy) {
+		this.accuracy = accuracy;
 	}
 
-	public String getSpecial() {
-		return special;
+	public int getPp() {
+		return pp;
 	}
 
-	public void setSpecial(String special) {
-		this.special = special;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public MovesObj(int moveId, String physical, String special, String status) {
-		super();
-		this.moveId = moveId;
-		this.physical = physical;
-		this.special = special;
-		this.status = status;
+	public void setPp(int pp) {
+		this.pp = pp;
 	}
 
 	public MovesObj() {
 		
 	}
 	
+	
+	public int getId() {
+		return Id;
+	}
+
+	public void setId(int id) {
+		Id = id;
+	}
+
+	public String getIdentifier() {
+		return identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+	}
+	
+	public MovesObj(int id, String identifier, int power, int accuracy, int pp) {
+		super();
+		Id = id;
+		this.identifier = identifier;
+		this.power = power;
+		this.accuracy = accuracy;
+		this.pp = pp;
+	}
+
 	
 }
